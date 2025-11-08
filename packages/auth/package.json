@@ -1,0 +1,24 @@
+{
+    "name": "@repo/auth",
+    "type": "module",
+    "exports": {
+        "./server": {
+            "default": "./dist/auth.server.js",
+            "types": "./dist/auth.server.d.ts"
+        },
+        "./client": {
+            "default": "./dist/auth.client.js",
+            "types": "./dist/auth.client.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "tsc && echo 'auth package build complete'"
+    },
+    "dependencies": {
+        "@repo/db": "workspace:*",
+        "better-auth": "^1.3.31"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*"
+    }
+}
